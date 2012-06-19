@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title> Testando Popover</title>
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap-popover.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script type="text/javascript">
+	$(function(){
+		
+		$("#popoverOn").live("click",function(){
+			$("#testePopover").popover('show');
+		});
+		$("#popoverOff").live("click",function(){
+			$("#testePopover").popover('hide');
+		});
+		
+		$("#testePopover").popover({
+			title:"Titulo Testando Popover",
+			content:"Conteudo popover",
+			trigger:"manual"
+		});
+	});
+	</script>	
+</head>
+<body>
+	</br>
+	</br>
+	</br>
+	</br>
+	
+	<input type="text"  id="testePopover" class="btn" />
+	</br>
+	</br>
+	<a id="popoverOn" class="btn btn-success">Popover on</a>
+	<a id="popoverOff" class="btn btn-danger">Popover off</a>
+
+</body>
+</html>
